@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BoxCo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class='page-header' align='center'>
+        <h1>Welcome to BoxCo</h1>
+    </div>
+    <!-- <div class="alert alert-success text-center" role="alert">You jumped over some of my buses!</div> -->
+    <div class='nav container col-md-2'>
+      <form id="box-add" onsubmit='return false'> 
+        <h3>On to the next box!</h3>
+        
+        <label> Box name: 
+          <input id='box-name' type="text" class="form-control" placeholder="Boxy McBoxface" aria-describedby="basic-addon1">
+        </label>
+
+        <label> What's in this box?
+            <input type="text" id='item1' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item2' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item3' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item4' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item5' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item6' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item7' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item8' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item9' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+            <input type="text" id='item10' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
+
+            
+            
+
+ 
+        </label>
+
+          <button type="submit" id='box-create' class="btn btn-primary">This box is PACKED!</button>
+      </form>
+    </div>
+
+    <div id='box-field' class='container-fluid col-md-10'>
+      <h3 id='empty-msg' class='text-white'><i>These boxes aren't gonna pack themselves! Pack a box.</i></h3>
+
+    
+
+
+
+    </div>
+</body>
+</html>
