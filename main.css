@@ -1,12 +1,15 @@
 .container, .container-fluid {
     
-    background-color: aqua;
+    background-color: rgb(158, 255, 255);
     margin: 30px;
-    border-radius: 30px;
+    border-radius: 15px;
     
 }
 .container-fluid {
     min-height: 100vh;
+}
+body {
+    background-color: white;
 }
 
 .boxy {
@@ -18,11 +21,14 @@
     color: white;
     font-size: 20px;
     border: 3px solid rgb(189, 179, 179);
+   
   
     
 }
 .nav {
-    background-color: bisque;
+    background-color: rgb(214, 163, 112);
+
+
     
 }
 
@@ -44,4 +50,8 @@ p {
     border-bottom: 1px dotted black;
     border-right: 1px dotted black;
     padding: 0 8px 4px 0;
+}
+
+.hidden {
+    visibility: hidden;
 }

@@ -20,11 +20,33 @@
     <div class='page-header' align='center'>
         <h1>Welcome to BoxCo</h1>
     </div>
-    <!-- <div class="alert alert-success text-center" role="alert">You jumped over some of my buses!</div> -->
-    <div class='nav container col-md-2'>
+    <div class='row'> 
+        <div class='col-md-12'> 
+            <div class='col-md-6 input-group'> 
+                    
+                <span class="input-group-addon" id="basic-addon1"><span class='glyphicon glyphicon-search'></span>  Find an item:</span>
+            
+                <input type='text' id='search-box' class='form-control' placeholder="Item">
+                
+                <span class='input-group-btn'>
+                        <button id='search-btn' class="btn btn-default form-control fixed" type="submit">Get it!</button>
+                </span>
+                <span id='alert-bar' class="hidden input-group-addon alert-success" id="basic-addon1">Pteranadon is in Box #5 - Flyosaurs!
+                    <button id='ok-search'>OK</button>
+                </span>
+            
+            </div>
+     
+       
+            
+        </div>
+        
+    </div> 
+    
+    <div class='nav container-fluid col-md-2 position-fixed'>
       <form id="box-add" onsubmit='return false'> 
         <h3>On to the next box!</h3>
-        
+    
         <label> Box name: 
           <input id='box-name' type="text" class="form-control" placeholder="Boxy McBoxface" aria-describedby="basic-addon1">
         </label>
