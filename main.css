@@ -1,35 +1,38 @@
 .container, .container-fluid {
-    
-    background-color: rgb(158, 255, 255);
-    margin: 30px;
-    border-radius: 15px;
-    
+    margin: 30px 30px; 
 }
 .container-fluid {
     min-height: 100vh;
 }
 body {
-    background-color: white;
+    background-image: url('Box\ pics/Boxy10-bright-temp.png');
+    background-size: 100%;
+    
 }
-
 .boxy {
-
-    background-color: rgb(223, 134, 62);
     height: 20vh;
     margin: 20px;
     border-radius: 20px;
     color: white;
     font-size: 20px;
-    border: 3px solid rgb(189, 179, 179);
-   
-  
-    
+    border: 2px dashed black;
+    background-image: url('Box\ pics/Boxy9-cyan-bright.png');
+    background-size: cover;  
+}
+.empty {
+    background: transparent;
+    border: 3px dashed black;
+    color: white;
+    padding-top: 15px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.hidden {
+    visibility: hidden;
 }
 .nav {
-    background-color: rgb(214, 163, 112);
-
-
-    
+    color: white;
+    font-weight: lighter;
 }
 
 #box-add {
@@ -40,18 +43,58 @@ body {
     float: right;
     margin: 0;
 }
-p {
-    margin-top: 30px;
+p, ul {
+    font-family: 'Neucha';
+    font-size: 25px;
+    
 }
-
+p {
+    padding-top: 15px; 
+}
 .box-header {
+    font-family: 'Permanent Marker';
     font-size: 30px;
-    font-weight: bold;
-    border-bottom: 1px dotted black;
-    border-right: 1px dotted black;
+    border-bottom: 2px dotted black;
+    border-right: 2px dotted black;
     padding: 0 8px 4px 0;
 }
 
 .hidden {
     visibility: hidden;
+}
+
+.new-header {
+    font-family: 'Permanent Marker';
+}
+
+.boxcoheader {
+    font-family: 'Permanent Marker';
+    font-size: 10px;
+    text-align: center;
+    color: white;
+    border-bottom: 3px solid white;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.find-text {
+    color: white;
+    font-size: 40px'
+}
+.sub-head {
+    margin-top: 0;
+    font-size: 20px;
+}
+.modal-header {
+    font-family: 'Permanent Marker';
+    font-size: 30px;
+}
+.modal-body {
+    font-family: 'Permanent Marker';
+    font-size: 20px;
+}
+#input-bar {
+    margin-bottom: 20px;
+    margin-left: 5px;
+
 }

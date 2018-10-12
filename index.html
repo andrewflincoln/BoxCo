@@ -3,11 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BoxCo</title>
+    <title>BoxCoLand</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-    <!-- Latest compiled and minified CSS -->
+   
+    <script src='functions.js'></script>
+     <script src="main.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Bahiana|Codystar|Crafty+Girls|Love+Ya+Like+A+Sister|Mali|Permanent+Marker|Rock+Salt" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Hi+Melody|Neucha" rel="stylesheet">
+     <script
+     src="https://code.jquery.com/jquery-3.3.1.js"
+     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+     crossorigin="anonymous"></script>
+     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
@@ -17,35 +25,104 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class='page-header' align='center'>
-        <h1>Welcome to BoxCo</h1>
+    <div class='boxcoheader'>
+        <h1>BoxCoLand!</h1><br>
+        <span class='sub-head'>The leader in box content knowledge</span>
+
     </div>
-    <div class='row'> 
-        <div class='col-md-12'> 
-            <div class='col-md-6 input-group'> 
+    <div class='row col-md-12' id='input-bar'> 
+        
+            <form class='form-inline cold-md-12'> 
                     
-                <span class="input-group-addon" id="basic-addon1"><span class='glyphicon glyphicon-search'></span>  Find an item:</span>
-            
-                <input type='text' id='search-box' class='form-control' placeholder="Item">
-                
-                <span class='input-group-btn'>
-                        <button id='search-btn' class="btn btn-default form-control fixed" type="submit">Get it!</button>
-                </span>
-                <span id='alert-bar' class="hidden input-group-addon alert-success" id="basic-addon1">Pteranadon is in Box #5 - Flyosaurs!
-                    <button id='ok-search'>OK</button>
-                </span>
-            
+                    <label for='search-box'></label>
+               
+                    <input type='text' id='search-box' class='form-control' placeholder="Item">
+                    
+                    <label for='search-btn'></label>
+                    <button type="submit" id='search-btn' class="form-control btn btn-primary"> <span class='glyphicon glyphicon-search'></span> Find an Item</button>
+                    
+                    <label for='alert-bar'> </label>
+                    <span id='alert-bar' class="form-control hidden alert-success">search msg here
+                        <button id='ok-search' class='btn btn-primary'>OK</button>
+                    </span>
+                    <label for='first-reset'></label>
+                    <button type='button' id='first-reset' class=' btn btn-primary pull-right' data-toggle="modal" data-target="#resetModal">Reset Boxes</button>
+                    <label for='see-unpacked-btn'> </label>
+                    <button type='button' id='see-unpacked-btn' name='see-unpacked-btn' class='btn btn-primary pull-right' data-toggle="modal" data-target='#unpackedList'>See Unpacked Items</button>
+          
+                  
+                <!-- reset modal code     -->
+                    <div class="modal" id='resetModal' tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <span class="modal-title">Reset?</span>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <span>Resetting will delete all of your boxes.<br>Just making sure!</span>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" id='reset-boxes' class="btn btn-primary">Reset</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                <!-- unpack modal code     -->
+                <div class="modal" id='unpackModal' tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <span class="modal-title">You unpacked a box!</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <span id='modal-unpack-update'>Its items are now in your Unpacked list<br><br>Keep up the good work!</span>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- unpacked list   -->
+              <div class="modal" id='unpackedList' tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="modal-title">Unpacked so far:</span>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <span id='modal-unpacked-list'>Looks like you haven't unpacked nothin yet!</span>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                  
+                    </div>
+                  </div>
+                </div>
             </div>
-     
-       
-            
-        </div>
+                    
+             
+               
+            </form>
         
     </div> 
     
-    <div class='nav container-fluid col-md-2 position-fixed'>
+    <div class='nav col-md-2'>
       <form id="box-add" onsubmit='return false'> 
-        <h3>On to the next box!</h3>
+       <h3 class='new-header'>New Box</h3>
     
         <label> Box name: 
           <input id='box-name' type="text" class="form-control" placeholder="Boxy McBoxface" aria-describedby="basic-addon1">
@@ -62,23 +139,21 @@
             <input type="text" id='item8' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
             <input type="text" id='item9' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
             <input type="text" id='item10' class="form-control" placeholder="Item" aria-describedby="basic-addon1">
-
-            
-            
-
- 
         </label>
 
-          <button type="submit" id='box-create' class="btn btn-primary">This box is PACKED!</button>
+          <button type="submit" id='box-create' class="btn btn-primary">Pack It!</button>
       </form>
     </div>
+   
 
-    <div id='box-field' class='container-fluid col-md-10'>
-      <h3 id='empty-msg' class='text-white'><i>These boxes aren't gonna pack themselves! Pack a box.</i></h3>
-
-    
-
-
+    <div id='box-field' class='container col-md-9'>
+      <div id='empty-msg' class='boxy empty hidden col-md-5'><p class = 'box-header'>Welcome to BoxCoLand!<br>
+      <ul>
+          <li>Pack an irl box.</li>
+          <li>Create its virtual doppelganger.</li>
+          <li>Know where your stuff is!</li>
+      
+      </ul></p>
 
     </div>
 </body>
