@@ -4,10 +4,6 @@ BoxCoLand is a simple app made to help the user keep track of their stuff as the
 
 User can create boxes corresponding to their real ones as they pack, search to easily find items, and track their unpacking progress.
 
-https://drive.google.com/file/d/1tYTblXNmJ1c_qI5xtMfWzx-nB-bNgVnZ/view?usp=sharing
-
-https://drive.google.com/file/d/1WZ3PtZY3Ze2e7cqH_dlpXNSyjsrnafsQ/view?usp=sharing
-
 
 
 ![BoxCoLand main interface](./screens/main.png)
