@@ -6,7 +6,7 @@ function createBox(boxObject) {
     newBox.innerHTML = 
         `<span class='box-header'>
         #${boxObject.number}  - 
-        ${boxObject.name}</span><br><p><i>In this box:  </i> 
+        ${boxObject.name}</span><br><p><i>In this box:   </i> 
         ${boxObject.items.join(', ')}</p>
         
         <div class="btn-group pull-right" role="group" aria-label="...">

@@ -10,7 +10,7 @@ body {
     
 }
 .boxy {
-    height: 20vh;
+    height: 25vh;
     margin: 20px;
     border-radius: 20px;
     color: white;
@@ -49,14 +49,14 @@ p, ul {
     
 }
 p {
-    padding-top: 15px; 
+    padding-top: 10px; 
 }
 .box-header {
     font-family: 'Permanent Marker';
     font-size: 30px;
     border-bottom: 2px dotted black;
     border-right: 2px dotted black;
-    padding: 0 8px 4px 0;
+    padding-right: 7px;
 }
 
 .hidden {
